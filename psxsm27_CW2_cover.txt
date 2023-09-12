@@ -1,0 +1,25 @@
+Name: Soomin Myung
+ID: 20306231
+Username: psxsm27
+URL: mersey.cs.nott.ac.uk/~psxsm27/login.php
+
+List of files:
+
+\sql\queries.txt -> db construct
+
+\account\a_delete.php, a_insert.php, account.php
+\fines\f_delete.php, f_ins_edit.php, fines.php
+\offence\off_delete.php, off_ins_edit.php, offence.php
+\people\p_delete.php, p_ins_edit.php, people.php
+\report\r_delete.php, r_ins_edit.php, report.php
+\vehicle\v_delete.php, v_ins_edit.php, vehicle.php
+\change_password.php, login.php, logout.php
+\dbcon.php, main.php
+\accounts.txt
+
+\css\styles.css
+\images\logo.jpg
+\script\jquery-3.5.1.min.js
+\sql\ERD.mwb
+
+psxsm27_UserManual.pdf, psxsm27_Technical.pdf

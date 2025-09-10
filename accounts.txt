@@ -1,0 +1,8 @@
+ID/password
+
+* admin account
+haskins/copper99
+
+* non-admin account
+regan/plod123
+carter/fuzz42

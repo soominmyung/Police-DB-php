@@ -1,6 +1,7 @@
 <?php
-// Initialize the session
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 // Include config file
 require_once "../dbcon.php";
 
@@ -170,5 +171,6 @@ if (isset($_POST['post']) && $_POST['post'] == 1) {
     </div>
   </div>
 </body>
+
 
 </html>

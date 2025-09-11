@@ -70,9 +70,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <input type="hidden" name="page" value=1 />
           <button class="search_btn"><i class="fa fa-search"></i></button>
         </form>
-        <?php if ($isadmin == true) { ?>
-            <button class="new_btn" onclick="window.location.href='p_ins_edit.php';"> new </button>
-        <?php } ?>
+        <?php
+        if ($isadmin == true) {
+            echo '<button class="new_btn" onclick="window.location.href=\'p_ins_edit.php\';"> new </button>';
+        }
+        ?>
       </div>
 
       <script>
@@ -200,4 +202,5 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 

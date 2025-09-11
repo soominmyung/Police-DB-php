@@ -1,6 +1,11 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-
+if (getenv('DEMO_MODE') === '1') {
+    http_response_code(200); 
+    echo "Public demo is read only. New, edit and delete are disabled. "
+       . "Please run the project locally to try full functionality.";
+    exit;
+}
 // Check if the user is logged in, otherwise redirect to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");

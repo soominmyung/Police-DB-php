@@ -142,7 +142,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               echo "<td>" . $row["People_address"] . "</td>";
               echo "<td>" . $row["People_licence"] . "</td>";
 
-            <?php
             if ($isadmin == true) {
                 // Delete button executes JavaScript confirmDelete
                 echo "<td><button onclick='confirmDelete(" . $row["People_ID"] . ")'>Delete</button></td>";
@@ -150,7 +149,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 echo "<td><button onclick='Edit(" . $row["People_ID"] . ")'>Edit</button></td>";
             }
             echo "</tr>";
-            ?>
             }
             echo "</table>";
 
@@ -202,5 +200,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 
 

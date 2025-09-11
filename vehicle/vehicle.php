@@ -82,11 +82,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           var conf = confirm("Are you sure?");
           if (conf == true) // if OK pressed
           { // delete the chosen record using V_delete.php file
-            if (window.location.href = "v_delete.php?Vehicle_ID=".concat(ID)) {
-              window.alert("Deleted successfully.");
-            } else {
-              window.alert("An error has occured.");
-            }
+            window.location.href = "v_delete.php?Vehicle_ID=".concat(ID)
           }
         }
 
@@ -220,6 +216,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 
 
 

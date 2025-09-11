@@ -83,14 +83,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           var conf = confirm("Are you sure?");
           if (conf == true) // if OK pressed
           { // delete the chosen record using p_delete.php file
-            if (window.location.href = "p_delete.php?People_ID=".concat(ID)) {
-              window.alert("Deleted successfully.");
-            } else {
-              // alert error message if failed
-              window.alert("An error has occured. Please contact administrator.");
-            }
+            window.location.href = "p_delete.php?People_ID=".concat(ID)
           }
         }
+        
 
         // Edit function to open the edit page when Edit button pressed
         function Edit(ID) {
@@ -207,6 +203,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 
 
 

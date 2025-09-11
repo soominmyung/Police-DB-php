@@ -9,5 +9,4 @@ $port = intval(getenv('DB_PORT') ?: getenv('MYSQLPORT') ?: 3306);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $conn = mysqli_connect($host, $user, $pass, $db, $port);
 mysqli_set_charset($conn, 'utf8mb4');
-?>
 

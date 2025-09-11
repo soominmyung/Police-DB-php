@@ -133,9 +133,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           // start table
           if (mysqli_num_rows($result) > 0) {
             echo "<table class='p_result_table'>";
-            echo "<tr><th class='name'>Name</th><th class='address'>Address</th><th class='p_licence'>Licence</th><th class='btn'></th>
-                <th class='btn'></th></tr>"; // table header
-
+            echo "<tr>";
+            echo "<th class='name'>Name</th>";
+            echo "<th class='address'>Address</th>";
+            echo "<th class='p_licence'>Licence</th>";
+            if ($isadmin == true) {
+                echo "<th class='btn'></th>";
+                echo "<th class='btn'></th>";
+            }
+            echo "</tr>"; // table header
+              
             while ($row = mysqli_fetch_assoc($result)) {
               echo "<tr>";
               echo "<td>" . $row["People_name"] . "</td>";
@@ -200,6 +207,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 
 
 

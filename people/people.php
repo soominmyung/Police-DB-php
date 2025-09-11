@@ -70,8 +70,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <input type="hidden" name="page" value=1 />
           <button class="search_btn"><i class="fa fa-search"></i></button>
         </form>
-        <button class="new_btn" onclick="window.location.href='p_ins_edit.php';"> new </button>
-
+        <?php if ($isadmin == true) { ?>
+            <button class="new_btn" onclick="window.location.href='p_ins_edit.php';"> new </button>
+        <?php } ?>
       </div>
 
       <script>
@@ -139,11 +140,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               echo "<td>" . $row["People_address"] . "</td>";
               echo "<td>" . $row["People_licence"] . "</td>";
 
-              // Delete button executes JavaScript confirmDelete
-              echo "<td><button onclick='confirmDelete(" . $row["People_ID"] . ")'>Delete</button></td>";
-              // Edit button executes JavaScript Edit
-              echo "<td><button onclick='Edit(" . $row["People_ID"] . ")'>Edit</button></td>";
-              echo "</tr>";
+            <?php
+            if ($isadmin == true) {
+                // Delete button executes JavaScript confirmDelete
+                echo "<td><button onclick='confirmDelete(" . $row["People_ID"] . ")'>Delete</button></td>";
+                // Edit button executes JavaScript Edit
+                echo "<td><button onclick='Edit(" . $row["People_ID"] . ")'>Edit</button></td>";
+            }
+            echo "</tr>";
+            ?>
             }
             echo "</table>";
 
@@ -195,3 +200,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+

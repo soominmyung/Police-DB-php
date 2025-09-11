@@ -1,6 +1,5 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once __DIR__.'/dbcon.php';
 
 // Check if the user is logged in, otherwise redirect to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {

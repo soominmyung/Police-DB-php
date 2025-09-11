@@ -94,7 +94,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <button class="search_btn"><i class="fa fa-search"></i></button>
           </p>
         </form>
-        <button class="new_btn" onclick="window.location.href='r_ins_edit.php';"> new </button>
+        <?php
+        if ($isadmin == true) {
+            echo '<button class="new_btn" onclick="window.location.href=\'r_ins_edit.php\';"> new </button>';
+        }
+        ?>
       </div>
 
       <script>
@@ -174,27 +178,46 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           $R_result_1 = mysqli_query($conn, $R_sql_1);
 
           if (mysqli_num_rows($R_result_1) > 0) {
-            echo "<table>";  // start table
-            echo "<tr><th class='inc_ID_th'>Incident ID</th><th>Date</th><th>Personal name</th><th>Personal licence</th>
-            <th>Vehicle licence</th><th>Offence type</th><th>Report</th><th>Vehicle type</th>
-            <th>Vehicle colour</th><th class='btn'></th><th class='btn'></th></tr>"; // table header
-            while ($R_row = mysqli_fetch_assoc($R_result_1)) {
-              echo "<tr>";
-              echo "<td>" . $R_row["Incident_ID"] . "</td>";
-              echo "<td>" . $R_row["Incident_date"] . "</td>";
-              echo "<td>" . $R_row["People_name"] . "</td>";
-              echo "<td>" . $R_row["People_licence"] . "</td>";
-              echo "<td>" . $R_row["Vehicle_licence"] . "</td>";
-              echo "<td>" . $R_row["Offence_description"] . "</td>";
-              echo "<td>" . $R_row["Incident_report"] . "</td>";
-              echo "<td>" . $R_row["Vehicle_type"] . "</td>";
-              echo "<td>" . $R_row["Vehicle_colour"] . "</td>";
-
-              // Delete button executes JavaScript confirmDelete          
-              echo "<td><button onclick='confirmDelete(" . $R_row["Incident_ID"] . ")'>Delete</button></td>";
-              // Edit button executes JavaScript Edit
-              echo "<td><button onclick='Edit(" . $R_row["Incident_ID"] . ")'>Edit</button></td>";
-              echo "</tr>";
+                echo "<table>";  // start table
+                echo "<tr>";
+                echo "<th class='inc_ID_th'>Incident ID</th>";
+                echo "<th>Date</th>";
+                echo "<th>Personal name</th>";
+                echo "<th>Personal licence</th>";
+                echo "<th>Vehicle licence</th>";
+                echo "<th>Offence type</th>";
+                echo "<th>Report</th>";
+                echo "<th>Vehicle type</th>";
+                echo "<th>Vehicle colour</th>";
+            
+                if ($isadmin == true) {
+                    echo "<th class='btn'></th>";
+                    echo "<th class='btn'></th>";
+                }
+            
+                echo "</tr>";
+            
+                while ($R_row = mysqli_fetch_assoc($R_result_1)) {
+                    echo "<tr>";
+                    echo "<td>" . $R_row["Incident_ID"] . "</td>";
+                    echo "<td>" . $R_row["Incident_date"] . "</td>";
+                    echo "<td>" . $R_row["People_name"] . "</td>";
+                    echo "<td>" . $R_row["People_licence"] . "</td>";
+                    echo "<td>" . $R_row["Vehicle_licence"] . "</td>";
+                    echo "<td>" . $R_row["Offence_description"] . "</td>";
+                    echo "<td>" . $R_row["Incident_report"] . "</td>";
+                    echo "<td>" . $R_row["Vehicle_type"] . "</td>";
+                    echo "<td>" . $R_row["Vehicle_colour"] . "</td>";
+            
+                    if ($isadmin == true) {
+                        // Delete button executes JavaScript confirmDelete
+                        echo "<td><button onclick='confirmDelete(" . $R_row["Incident_ID"] . ")'>Delete</button></td>";
+                        // Edit button executes JavaScript Edit
+                        echo "<td><button onclick='Edit(" . $R_row["Incident_ID"] . ")'>Edit</button></td>";
+                    }
+            
+                    echo "</tr>";
+                }
             }
             echo "</table>";
             // pagination
@@ -245,3 +268,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+

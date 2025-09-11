@@ -136,10 +136,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               echo "<td>" . $row["People_name"] . "</td>";
               echo "<td>" . $row["People_licence"] . "</td>";
 
-              // Delete button executes JavaScript confirmDelete          
-              echo "<td><button onclick='confirmDelete(" . $row["Vehicle_ID"] . ")'>Delete</button></td>";
-              // Edit button executes JavaScript Edit
-              echo "<td><button onclick='Edit(" . $row["Vehicle_ID"] . ")'>Edit</button></td>";
+            <?php
+            if ($isadmin == true) {
+                // Delete button executes JavaScript confirmDelete
+                echo "<td><button onclick='confirmDelete(" . $row["Vehicle_ID"] . ")'>Delete</button></td>";
+                // Edit button executes JavaScript Edit
+                echo "<td><button onclick='Edit(" . $row["Vehicle_ID"] . ")'>Edit</button></td>";
+            }
+            ?>
+
               echo "</tr>";
             }
             echo "</table>";
@@ -205,6 +210,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 
 
 

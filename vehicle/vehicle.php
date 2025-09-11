@@ -128,7 +128,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
           if (mysqli_num_rows($result_2) > 0) {
             echo "<table id='v_table'>";  // start table
-            echo "<tr><th>Type</th><th>Colour</th><th>Vehicle licence</th><th>Owner name</th><th>Owner licence</th><th></th><th></th></tr>"; // table header
+            echo "<tr>";
+            echo "<th>Type</th>";
+            echo "<th>Colour</th>";
+            echo "<th>Vehicle licence</th>";
+            echo "<th>Owner name</th>";
+            echo "<th>Owner licence</th>";
+            if ($isadmin == true) {
+                echo "<th></th><th></th>";
+            }
+            echo "</tr>";
+
 
             while ($row = mysqli_fetch_assoc($result_2)) {
               echo "<tr>";
@@ -210,6 +220,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+
 
 
 

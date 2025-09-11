@@ -2,6 +2,12 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+if (getenv('DEMO_MODE') === '1') {
+    http_response_code(200); 
+    echo "Public demo is read only. New, edit and delete are disabled. "
+       . "Please run the project locally to try full functionality.";
+    exit;
+}
 // Include config file
 require_once "../dbcon.php";
 
@@ -131,3 +137,4 @@ if (isset($_POST['new']) && $_POST['new'] == 1) {
 
 
 </html>
+

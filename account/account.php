@@ -72,11 +72,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           var conf = confirm("Are you sure?");
           if (conf == true) // if OK pressed
           {
-            if (window.location.href = "a_delete.php?Users_ID=".concat(ID)) {
-              window.alert("Deleted successfully.");
-            } else {
-              window.alert("An error has occured.");
-            }
+            window.location.href = "a_delete.php?Users_ID=".concat(ID)
           }
         }
       </script>
@@ -172,3 +168,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+

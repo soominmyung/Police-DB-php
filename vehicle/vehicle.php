@@ -69,7 +69,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <input type="text" name="V_search" size="40" placeholder="Enter search keyword or just press search button" />
           <button class="search_btn"><i class="fa fa-search"></i></button>
         </form>
-        <button class="new_btn" onclick="window.location.href='v_ins_edit.php';"> new </button>
+        if ($isadmin == true){
+        <button class="new_btn" onclick="window.location.href='v_ins_edit.php';"> new </button>}
       </div>
 
       <script>
@@ -203,3 +204,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 </html>
+

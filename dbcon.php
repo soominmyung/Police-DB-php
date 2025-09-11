@@ -1,15 +1,12 @@
 <?php
-// Secure DB connection using environment variables
-$servername = getenv('DB_HOST') ?: '127.0.0.1';
-$username   = getenv('DB_USER') ?: 'root';
-$password   = getenv('DB_PASS') ?: '';
-$dbname     = getenv('DB_NAME') ?: 'test';
+// Read explicit app vars first, then fall back to Railway provided ones
+$host = getenv('DB_HOST') ?: getenv('MYSQLHOST') ?: 'mysql.railway.internal';
+$user = getenv('DB_USER') ?: getenv('MYSQLUSER');
+$pass = getenv('DB_PASS') ?: getenv('MYSQLPASSWORD');
+$db   = getenv('DB_NAME') ?: getenv('MYSQLDATABASE');
+$port = intval(getenv('DB_PORT') ?: getenv('MYSQLPORT') ?: 3306);
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-    die("Connection failed");
-}
+$conn = mysqli_connect($host, $user, $pass, $db, $port);
 mysqli_set_charset($conn, 'utf8mb4');
 ?>

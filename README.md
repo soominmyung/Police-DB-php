@@ -2,6 +2,8 @@
 
 ### 🚔 A Police Database Web Application built with PHP & MySQL — featuring responsive forms, robust input validation, and role-based access control.
 
+<br>
+
 ## Overview
 This project is a **Police Database Management Web Application** built with **PHP** and **MySQL**.  
 - It was developed in 2020 as the final coursework project for the *Databases, Interfaces and Software Design Principles (DIS)* module at the University of Nottingham.

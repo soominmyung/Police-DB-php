@@ -5,7 +5,7 @@ This project is a **Police Database Management Web Application** built with **PH
 - It was developed in 2020 as the final coursework project for the *Databases, Interfaces and Software Design Principles (DIS)* module at the University of Nottingham.
 - Purpose: Demonstrate ability to design and implement a relational database-backed web application with full CRUD and role-based access.  
 
----
+##
 The **visual design was intentionally kept minimal**. The focus was on the underlying logic rather than styling, because the main goal was to:
 - Provide **responsive workflows**: **pages react immediately to user input, revealing different sub-sections depending on context** (e.g. when adding an incident, whether a person or vehicle already exists or needs to be created). This was prioritised over visual polish.
 - Ensure **robust database integration**: all entities are tightly linked with relational constraints.  
@@ -13,10 +13,21 @@ The **visual design was intentionally kept minimal**. The focus was on the under
 - Deliver **advanced search and filtering**: multi-criteria queries to showcase indexing and optimisation.  
 - Apply **role-based access control**: menus and actions differ for admins and standard users.  
 
----
+<br>
+
+## Demo Screenshots, Insert New Incident Record Page (Only visible to the Admin account)
+<br>
+<img width="776" height="636" alt="image" src="https://github.com/user-attachments/assets/c2493ad8-c8b1-4d41-8ee7-865432a24ecb" />
+<br>
+<br>
+
+##
 
 **Live demo:** [https://police-db-php-production.up.railway.app/](https://police-db-php-production.up.railway.app/)
 
+**_(See Technical Manual for more details)_**
+
+##
 The system allows police officers to record and retrieve information on:
 - People involved in traffic incidents  
 - Vehicles and ownership records  
@@ -25,6 +36,8 @@ The system allows police officers to record and retrieve information on:
 - Fines imposed  
 
 It also includes full account management with different permissions depending on user role (admin vs standard user).
+<br>
+<br>
 
 ## Features
 - **Login & Session Management**: Username/password-based login.  
@@ -35,6 +48,9 @@ It also includes full account management with different permissions depending on
 - **Fines Module**: Admins can assign fines to incidents.  
 - **Account Management**: Admins can create, delete, and manage user accounts.  
 
+<br>
+<br>
+
 ## User Roles
 - **Admin users**:  
   - Full access including managing accounts, offences, and fines.  
@@ -43,6 +59,9 @@ It also includes full account management with different permissions depending on
   - Limited access to record, search, and update incidents, people, and vehicles.  
 
 👉 Initial demo credentials are provided in `accounts.txt` (admin and non-admin accounts).
+
+<br>
+<br>
 
 ## System Design
 - **Database**: MySQL with 7 tables  
@@ -55,6 +74,9 @@ It also includes full account management with different permissions depending on
 
 👉 While the UI reflects the coursework period, the real strength lies in **relational schema design, input validation, and user access management**.
 
+<br>
+<br>
+
 ## Installation (local)
 1. Clone repository and set up in a PHP-supported web server (Apache recommended).  
 2. Import `sql/queries.txt` into MySQL to create schema and seed initial records.  
@@ -64,19 +86,19 @@ It also includes full account management with different permissions depending on
    ```  
 4. Start server and navigate to `http://localhost/login.php`.  
 
+<br>
+<br>
+
 ## Deployment (Railway)
 - Application deployed at [up.railway.app](https://police-db-php-production.up.railway.app/) using PHP + MySQL services.  
 - Database credentials are injected as environment variables (`MYSQLHOST`, `MYSQLUSER`, etc.).  
+
+<br>
+<br>
 
 ## Documentation
 - **User Manual**: Detailed usage guide with screenshots of all modules.  
 - **Technical Manual**: System architecture, database schema, file organisation, and workflows.  
 
-## Demo Screenshots (See Technical Manual for more details)
 
-## Fine Record Search Page (Admin)
-<img width="1212" height="581" alt="image" src="https://github.com/user-attachments/assets/0d0609da-c97e-40cd-9e6e-51260655a40a" />
-
-## Insert New Incident Record Page (Admin)
-<img width="1164" height="655" alt="image" src="https://github.com/user-attachments/assets/c2493ad8-c8b1-4d41-8ee7-865432a24ecb" />
 

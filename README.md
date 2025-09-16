@@ -15,7 +15,7 @@ The **visual design was intentionally kept minimal**. The focus was on the under
 
 <br>
 
-## Demo Screenshots, Insert New Incident Record Page (Only visible to the Admin account)
+## Demo Screenshot, Insert New Incident Record Page (Only visible to the Admin account)
 <br>
 <img width="776" height="636" alt="image" src="https://github.com/user-attachments/assets/c2493ad8-c8b1-4d41-8ee7-865432a24ecb" />
 <br>

@@ -1,5 +1,7 @@
 # Police DB Web Application
 
+🚔 A fully functional Police Database Web Application with **real-time responsive forms**, **robust SQL integration**, and **role-based access control**.
+
 ## Overview
 This project is a **Police Database Management Web Application** built with **PHP** and **MySQL**.  
 - It was developed in 2020 as the final coursework project for the *Databases, Interfaces and Software Design Principles (DIS)* module at the University of Nottingham.
@@ -19,7 +21,7 @@ The **visual design was intentionally kept minimal**. The focus was on the under
 <br>
 <img width="776" height="636" alt="image" src="https://github.com/user-attachments/assets/c2493ad8-c8b1-4d41-8ee7-865432a24ecb" />
 <br>
-<br>
+
 
 ##
 
@@ -36,7 +38,7 @@ The system allows police officers to record and retrieve information on:
 - Fines imposed  
 
 It also includes full account management with different permissions depending on user role (admin vs standard user).
-<br>
+
 <br>
 
 ## Features
@@ -49,7 +51,7 @@ It also includes full account management with different permissions depending on
 - **Account Management**: Admins can create, delete, and manage user accounts.  
 
 <br>
-<br>
+
 
 ## User Roles
 - **Admin users**:  
@@ -61,7 +63,7 @@ It also includes full account management with different permissions depending on
 👉 Initial demo credentials are provided in `accounts.txt` (admin and non-admin accounts).
 
 <br>
-<br>
+
 
 ## System Design
 - **Database**: MySQL with 7 tables  
@@ -75,7 +77,7 @@ It also includes full account management with different permissions depending on
 👉 While the UI reflects the coursework period, the real strength lies in **relational schema design, input validation, and user access management**.
 
 <br>
-<br>
+
 
 ## Installation (local)
 1. Clone repository and set up in a PHP-supported web server (Apache recommended).  
@@ -87,14 +89,14 @@ It also includes full account management with different permissions depending on
 4. Start server and navigate to `http://localhost/login.php`.  
 
 <br>
-<br>
+
 
 ## Deployment (Railway)
 - Application deployed at [up.railway.app](https://police-db-php-production.up.railway.app/) using PHP + MySQL services.  
 - Database credentials are injected as environment variables (`MYSQLHOST`, `MYSQLUSER`, etc.).  
 
 <br>
-<br>
+
 
 ## Documentation
 - **User Manual**: Detailed usage guide with screenshots of all modules.  

@@ -257,7 +257,7 @@ input[type="text"], input[type="date"], input[type="number"], input[type="passwo
 }
 
 .demo-accounts {
-    margin-top: 28px;   /* 원하는 값으로 조절 */
+    margin-top: 40px;
 }
 
 #ch_password_new, #ch_password_conf {
@@ -541,4 +541,5 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 

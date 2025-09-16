@@ -121,24 +121,24 @@ if (isset($_POST['login']) && $_POST['login'] == 1) {
             </div>
         </div>
         <div class="demo-accounts">
-        <h3>About this Web Application</h3>
-        <p>
-        This Police Database Management System was developed as a university coursework project.  
-        It demonstrates how PHP and MySQL can be used to build a full CRUD web application with:
-        </p>
-        <ul>
-            <li>Responsive forms that adapt to user input</li>
-            <li>Relational database with strong consistency checks</li>
-            <li>Role-based access control (different menus for admins vs. standard users)</li>
-            <li>Error handling that prevents invalid or inconsistent records</li>
-        </ul>
+            <h3>About this Web Application</h3>
+            <p>
+            This Police Database Management System was developed as a university coursework project.  
+            It demonstrates how PHP and MySQL can be used to build a full CRUD web application with:
+            </p>
+            <ul>
+                <li>Responsive forms that adapt to user input</li>
+                <li>Relational database with strong consistency checks</li>
+                <li>Role-based access control (different menus for admins vs. standard users)</li>
+                <li>Error handling that prevents invalid or inconsistent records</li>
+            </ul>
             
-        <h3>Demo Accounts</h3>
-        <ul>
-            <li><strong>Admin account</strong>: haskins / copper99</li>
-            <li><strong>Non-admin account</strong>: regan / plod123</li>
-            <li><strong>Non-admin account</strong>: carter / fuzz42</li>
-        </ul>
+            <h3>Demo Accounts</h3>
+            <ul>
+                <li><strong>Admin account</strong>: haskins / copper99</li>
+                <li><strong>Non-admin account</strong>: regan / plod123</li>
+                <li><strong>Non-admin account</strong>: carter / fuzz42</li>
+            </ul>
         </div>
     </div>
 </body>

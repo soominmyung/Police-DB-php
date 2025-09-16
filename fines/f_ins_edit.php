@@ -2,7 +2,10 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && getenv('DEMO_MODE') === '1') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST'
+    && getenv('DEMO_MODE') === '1'
+    && isset($_POST['new']) && $_POST['new'] == '1') {
+
     echo "<script>alert('Public demo is read only. New, edit and delete are disabled.');</script>";
     echo "<script>window.location.replace('fines.php')</script>";
     exit;
@@ -383,5 +386,6 @@ if (isset($_POST['new']) && $_POST['new'] == 1) {
 
 
 </html>
+
 
 

@@ -1,6 +1,6 @@
 # Police DB Web Application
 
-🚔 A fully functional Police Database Web Application with **real-time responsive forms**, **robust SQL integration**, and **role-based access control**.
+### 🚔 A Police Database Web Application built with PHP & MySQL — featuring responsive forms, robust input validation, and role-based access control.
 
 ## Overview
 This project is a **Police Database Management Web Application** built with **PHP** and **MySQL**.  
@@ -25,7 +25,7 @@ The **visual design was intentionally kept minimal**. The focus was on the under
 
 ##
 
-**Live demo:** [https://police-db-php-production.up.railway.app/](https://police-db-php-production.up.railway.app/)
+### **Live demo:** [https://police-db-php-production.up.railway.app/](https://police-db-php-production.up.railway.app/)
 
 **_(See Technical Manual for more details)_**
 

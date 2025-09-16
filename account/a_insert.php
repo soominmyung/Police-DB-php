@@ -2,10 +2,12 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-if (getenv('DEMO_MODE') === '1') {
-    http_response_code(200); 
-    echo "Public demo is read only. New, edit and delete are disabled. "
-       . "Please run the project locally to try full functionality.";
+if ($_SERVER['REQUEST_METHOD'] === 'POST' 
+    && getenv('DEMO_MODE') === '1' 
+    && isset($_POST['new']) && $_POST['new'] == 1) {
+
+    echo "<script>alert('Public demo is read only. Creating accounts is disabled.');</script>";
+    echo "<script>window.location.replace('account.php')</script>";
     exit;
 }
 // Include config file
@@ -137,4 +139,5 @@ if (isset($_POST['new']) && $_POST['new'] == 1) {
 
 
 </html>
+
 

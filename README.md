@@ -1,7 +1,7 @@
 # Police DB Web Application
 
 ### 🚔 A Police Database Web Application built with PHP & MySQL — featuring responsive forms, robust input validation, and role-based access control.
-
+### _Key Stack: PHP · MySQL · jQuery · Railway (Deployment) · Role-based Access Control_
 <br>
 
 ## Overview

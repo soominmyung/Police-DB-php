@@ -1,0 +1,16 @@
+name: Keep Railway Awake
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 mins
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add small jitter (0-20s) to avoid exact clock hits
+        run: sleep $((RANDOM % 20))
+      - name: Ping Railway (HEAD, follow redirects)
+        run: |
+          URL="https://police-db-php-production.up.railway.app/login.php?keepalive=$(date +%s)"
+          curl -I -L --max-time 20 -A "keepalive-bot" "$URL" || true

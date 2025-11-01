@@ -29,6 +29,8 @@ The **visual design was intentionally kept minimal**. The focus was on the under
 
 ### **Live demo:** [https://police-db-php-production.up.railway.app/](https://police-db-php-production.up.railway.app/)
 
+**_The page may take a few attempts to load due to temporary server sleep mode._**
+
 **_(See Technical Manual for more details)_**
 
 ##
